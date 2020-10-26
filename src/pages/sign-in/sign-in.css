@@ -1,0 +1,33 @@
+.sign-in-content{
+  max-width: 100%;
+  padding: 15%;
+  margin: auto;
+  height: 100vh;
+  background-color: #680148;
+}
+
+.form-signin-max{
+  max-width: 650px;
+}
+
+.btn-singin{
+  background-color: #7DB4B5;
+  border-color: #7DB4B5
+}
+
+.btn-singin:hover{
+  background-color: #E0EFF1;
+  color:  #111111;
+  border-color: #7DB4B5
+}
+
+.option-signin a {
+  text-decoration: none;
+  transition: 0.3s;
+  color: #7DB4B5 ;
+}
+
+.option-signin a:hover {
+  text-decoration: none;
+  color: #E0EFF1 ;
+}
