@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link, Redirect } from 'react-router-dom'
+import { Link, Redirect} from 'react-router-dom'
 import firebase from '../../config/firebase'
 
 import { useDispatch, useSelector } from 'react-redux'
@@ -12,8 +12,8 @@ function SignIn(){
 
   const [email,setEmail] = useState()
   const [password,setPassword] = useState()
-  // const [authenticed,setAuthenticed] = useState(false)
   const [error,setError] = useState()
+
 
   const dispatch = useDispatch()
 
@@ -25,7 +25,6 @@ function SignIn(){
 
     firebase.auth().signInWithEmailAndPassword(email, password)
       .then( response => {
-        console.log('response')
         dispatch({type:'LOGIN', email:email})
       }).catch(error => {
         setError('Email ou senha incorretos')
@@ -34,7 +33,7 @@ function SignIn(){
 
   return (
     <div className="d-flex align-items-center sign-in-content">
-      { useSelector(state => state.logged) && <Redirect to='/sign-up'/>}
+      { useSelector(state => state.logged) && <Redirect to='/home'/>}
       <form className="form-signin form-signin-max mx-auto">
         <div className="text-center mb-4">
           <h1 className="h3 mb-3 font-weight-normal text-white">Dieta Flex</h1>
